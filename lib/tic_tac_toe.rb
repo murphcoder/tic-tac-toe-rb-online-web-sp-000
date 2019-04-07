@@ -45,22 +45,9 @@ def play(board)
     turn(board)
   end
   if draw?(board)
-    puts "Game is a draw."
+    puts "Cat's Game!"
   elsif won?(board)
-    puts "Congradulations, Player #{winner(board)}! You win!"
-  end
-  puts "Would you like to play again? Y/N"
-  input = gets.strip
-  until input == "Y" || input == "N"
-    puts "Please enter Y or N."
-    input = gets.strip
-  end
-  if input == "Y"
-    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-    display_board(board)
-    play(board)
-  elsif input == "N"
-    puts "Goodbye!"
+    puts "Congratulations #{winner(board)}!"
   end
 end
 
